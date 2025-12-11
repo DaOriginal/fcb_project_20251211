@@ -132,5 +132,16 @@ df.loc[clusters == low_value_cluster, 'operational_cost'] *= (1 - reduction_perc
 
 # 4.	A recommended monitoring framework using ML outputs.
 
+# A chart for Baseline forecast
+plt.figure(figsize=(10, 6))
+plt.plot(df.index, df['monthly_profit'], label='Baseline Monthly Profit', color='blue')
+plt.plot(df.index, df['predicted_profit_next_year'], label='Predicted Profit Next   Year', color='orange')
+plt.xlabel('Index')
+plt.ylabel('Profit')
+plt.title('Baseline vs Predicted Profit Next Year')
+plt.legend()
+plt.show()
+
+
 
 
